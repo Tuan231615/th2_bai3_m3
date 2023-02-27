@@ -1,0 +1,15 @@
+use quanlysinhvien;
+SELECT *
+FROM student
+WHERE status = true;
+SELECT *
+FROM subject
+WHERE credit < 10;
+SELECT S.studentId, S.studentname, C.classname
+FROM student S join class C on S.classid = C.classid;
+SELECT S.studentid, S.studentname, C.classname
+FROM student S join class C on S.classid = C.classid
+WHERE C.className = 'A1';
+SELECT S.studentid, S.studentname, Sub.subname, M.mark
+FROM student S join mark M on S.studentid = M.studentid join Subject Sub on M.subid = Sub.subid
+WHERE Sub.subname = 'CF';
